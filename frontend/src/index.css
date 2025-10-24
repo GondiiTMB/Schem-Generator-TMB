@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(91, 140, 255, 0.2), transparent 60%),
+    linear-gradient(180deg, #1a1c22 0%, #0d0e10 100%);
+  color: #f6f7fb;
+}
+
+a {
+  color: inherit;
+}
+
+.button-primary {
+  @apply bg-accent px-6 py-2 rounded-full font-semibold text-sm shadow-floating transition-transform transform hover:-translate-y-1 hover:shadow-2xl;
+}
+
+.panel {
+  @apply bg-white/5 backdrop-blur-lg rounded-3xl p-6 shadow-floating border border-white/10;
+}
+
+input,
+textarea,
+select {
+  @apply bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent/70 transition;
+}
+
+.tab-button {
+  @apply px-6 py-3 rounded-full text-sm font-semibold transition-all;
+}
+
+.tab-button-active {
+  @apply bg-accent text-black shadow-lg;
+}
+
+.tab-button-inactive {
+  @apply bg-white/5 text-white/70 hover:text-white;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
