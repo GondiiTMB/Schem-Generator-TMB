@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+numpy
+torch
+nbtlib
+litemapy
+python-multipart
